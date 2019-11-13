@@ -1,32 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!--    <HeaderComponent title="Webchemist's Theme" />
+    <h1>{{ welcome }}</h1> -->
+    <SpecialBgComponent />
+    <SectionNaverComponent />
+    <ContainerComponent />
+    <SectionFooterComponent />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import SpecialBgComponent from "./components/SpecialBg";
+import SectionNaverComponent from "./components/SectionNaver";
+import ContainerComponent from "./components/Container";
+import SectionFooterComponent from "./components/SectionFooter";
+//import HeaderComponent from "./components/Header";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    SpecialBgComponent,
+    SectionNaverComponent,
+    ContainerComponent,
+    SectionFooterComponent
+    //   HeaderComponent,
+  },
+  data: () => {
+    return {
+      welcome: `Welcome`
+    };
   }
 };
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-
-  img {
-    width: 200px;
-  }
+  /* padding-top: 50px; */
 }
 </style>
